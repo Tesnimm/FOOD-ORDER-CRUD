@@ -1,0 +1,8 @@
+# .htaccess
+
+RewriteEngine On
+
+# Tüm isteği index.php'ye yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
